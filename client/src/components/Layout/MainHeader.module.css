@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  height: 6rem;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff4c68;
+}
+
+.logo {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.header nav {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header a {
+  margin-left: 1.5rem;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header a:hover {
+  padding-bottom: 0.25rem;
+}
+
+.header a:active,
+.header a.active {
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #fff;
+}

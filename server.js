@@ -2,6 +2,8 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
+// https://fast-ridge-25038.herokuapp.com/ | https://git.heroku.com/fast-ridge-25038.git
+
 const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
@@ -12,9 +14,7 @@ const requireLogin = require("./middleware/requireLogin");
 const authController = require("./controllers/auth");
 const imageSearchController = require("./controllers/imageSearch");
 
-// const dbURL = process.env.DB_URL || "mongodb://localhost:27017/internAuth";
-const dbURL = "mongodb://localhost:27017/internAuth";
-// const dbURL = process.env.DB_URL;
+const dbURL = process.env.DB_URL || "mongodb://localhost:27017/internAuth";
 
 // DB Connection
 mongoose.connect(dbURL, {

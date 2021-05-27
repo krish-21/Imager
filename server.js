@@ -49,11 +49,6 @@ app.use(
   })
 );
 
-app.get("/test", (req, res) => {
-  console.log("test");
-  res.send("test");
-});
-
 // Reister User & Save to db
 app.post("/register", authController.registerUser);
 

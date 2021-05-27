@@ -1,4 +1,4 @@
-# YelpCamp
+# Imager
 
 Imager is a cloud-enabled Node.js-powered Web Application to search for Images.
 

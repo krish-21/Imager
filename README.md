@@ -1,6 +1,6 @@
 # Imager
 
-Imager is a cloud-enabled Node.js-powered Web Application to search for Images.
+Imager is a cloud-enabled, Node.js & React.js powered Web Application to search for Images.
 
 ## Features
 
@@ -35,7 +35,9 @@ Yelpcamp uses a lot of opensource projects to work properly
 
 Imager requires [Node.js](https://nodejs.org/) v10+ to run.
 
-1. Install dependencies & start the express.js server
+1. Clone this repository
+
+2. Install dependencies & start the express.js server
 
 ```sh
 cd Imager
@@ -43,7 +45,7 @@ npm i
 npm start
 ```
 
-2. install dependencies & start react.js server
+2. Install dependencies & start react.js server
 
 ```sh
 cd Imager
@@ -51,9 +53,3 @@ cd client
 npm i
 npm start
 ```
-
-## Improvements
-
-1. Can add more sophisticated auth to front-end. However, backend has secure auth
-2. Add styling to Authentication pages
-3. Add styling to indivisual images

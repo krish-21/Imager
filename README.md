@@ -57,7 +57,3 @@ npm start
 1. Can add more sophisticated auth to front-end. However, backend has secure auth
 2. Add styling to Authentication pages
 3. Add styling to indivisual images
-
-## License
-
-MIT

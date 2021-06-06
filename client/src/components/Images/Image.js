@@ -4,12 +4,12 @@ import styles from "./Image.module.css";
 
 const Image = (props) => {
   return (
-    <span className={styles.image}>
+    <div className={styles["image-card"]}>
       {/* clicking on image will send user to original image */}
       <a href={props.preview}>
-        <img src={props.src} alt={props.alt} />
+        <img src={props.src} alt={props.alt} className={styles.image} />
       </a>
-    </span>
+    </div>
   );
 };
 

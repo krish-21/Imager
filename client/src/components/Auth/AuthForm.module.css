@@ -1,0 +1,89 @@
+.auth {
+  margin: 3rem auto;
+  width: 95%;
+  max-width: 25rem;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.auth h2 {
+  text-align: center;
+  color: #ff4c68;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 5px solid #ff4c68;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  display: block;
+  color: #ff4c68;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  font: inherit;
+  background-color: #fce1e8;
+  color: #ec334f;
+  border-radius: 4px;
+  border: 1px solid white;
+  width: 100%;
+  text-align: left;
+  padding: 0.25rem;
+  border-radius: 5px;
+}
+
+.control input:focus {
+  outline: 3px solid #ff4c68;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions p {
+  color: #fff;
+}
+
+.actions button {
+  cursor: pointer;
+  font: inherit;
+  color: white;
+  background-color: #ff4c68;
+  border: 1px solid #ff4c68;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
+}
+
+.actions button:hover {
+  background-color: #fff;
+  color: #ff4c68;
+  border: 1px solid #ff4c68;
+}
+
+.actions .loading {
+  color: #ff4c67b4;
+}
+
+.actions .toggle {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: #ff4c68;
+  border: none;
+  padding: 0.15rem 1.5rem;
+}
+
+.actions .toggle:hover {
+  border: none;
+  color: #ff4c67b4;
+}

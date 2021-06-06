@@ -1,4 +1,12 @@
+.image-card {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
 .image {
-  display: inline-block;
-  margin: 1rem;
+  flex: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
 }

@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import AuthContext from "../store/auth-context";
 
 import styles from "./ImageSearch.module.css";
 
@@ -6,25 +8,31 @@ import ImageSearchFrom from "../components/Images/ImageSearchForm";
 import ImageList from "../components/Images/ImageList";
 
 const ImageSearch = () => {
+  // array of all images
   const [images, setImages] = useState([]);
 
+  // set state to image array
   const handleAddImages = (imageData) => {
-    // console.log(images);
     setImages(imageData);
   };
 
-  // defualt content
-  let content = <p className={styles.empty}>Your images will appear here</p>;
+  // logout function from context
+  const { logout } = useContext(AuthContext);
 
-  // If not authenticated, inform user
+  // If not authenticated, change context
+  // auto redirect to auth
   if (images.length === undefined) {
-    content = <p className={styles.empty}>Not authenticated!</p>;
+    logout();
   }
+
+  // defualt content
+  let content = <p className={styles.empty}>Your images will appear here!</p>;
 
   // If no images exist, inform user
-  else if (images[0] === null) {
+  if (images[0] === null) {
     content = <p className={styles.empty}>No matching images!</p>;
   }
+
   // render all images
   // current limit = 60 in backend
   else if (images.length > 0) {
@@ -34,7 +42,11 @@ const ImageSearch = () => {
   return (
     <>
       <ImageSearchFrom onAddImages={handleAddImages} />
-      <div className={styles["images"]}>{content}</div>
+      {images.length > 0 ? (
+        <div className={styles["images"]}>{content}</div>
+      ) : (
+        content
+      )}
     </>
   );
 };

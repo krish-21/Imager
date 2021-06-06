@@ -1,14 +1,17 @@
+import { useContext } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+
+import AuthContext from "./store/auth-context";
 
 import Layout from "./components/Layout/Layout";
 
 import HomePage from "./pages/HomePage";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import Logout from "./pages/Logout";
+import AuthPage from "./pages/AuthPage";
 import ImageSearch from "./pages/ImageSearch";
 
 function App() {
+  const { isLoggedIn } = useContext(AuthContext);
+
   return (
     <Layout>
       <Switch>
@@ -20,20 +23,14 @@ function App() {
           <HomePage />
         </Route>
 
-        <Route path="/register" exact>
-          <Register />
-        </Route>
-
-        <Route path="/login" exact>
-          <Login />
-        </Route>
-
-        <Route path="/logout" exact>
-          <Logout />
-        </Route>
+        {!isLoggedIn && (
+          <Route path="/auth" exact>
+            <AuthPage />
+          </Route>
+        )}
 
         <Route path="/images" exact>
-          <ImageSearch />
+          {isLoggedIn ? <ImageSearch /> : <Redirect to="/auth" />}
         </Route>
       </Switch>
     </Layout>

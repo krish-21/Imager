@@ -22,7 +22,7 @@ Authentication is required to search for images
 
 ## Tech Used
 
-Yelpcamp uses a lot of opensource projects to work properly
+Imager uses a lot of open-source projects to work properly
 
 - [React.js](https://reactjs.org) - Front-end
 - [Node.js](https://nodejs.org/en/)
